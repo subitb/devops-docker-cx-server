@@ -1,0 +1,22 @@
+[
+    {
+      "id": "webhook",
+      "execute-command": "/script.sh",
+      "command-working-directory": "/",
+      "response-message": "I got the payload!",
+      "response-headers":
+      [
+        {
+          "name": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ],
+      "pass-arguments-to-command":
+      [
+        {
+          "source": "payload",
+          "name": "repository.clone_url"
+        }
+      ]
+    }
+  ]
